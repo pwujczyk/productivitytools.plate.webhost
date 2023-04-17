@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import { PTButton, PTPlate } from "productivitytools.plate";
+import { PTButton } from "productivitytools.plate";
 
 function App() {
   return (
     <div className="App">
-      hello
+      hello2
       <PTButton label="click me!"></PTButton>
-      <PTPlate></PTPlate>
+      {/* <PTPlate></PTPlate> */}
     </div>
   );
 }
