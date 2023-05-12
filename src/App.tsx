@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       hello2
       <PTButton label="click me!"></PTButton>
-      <PTPlate></PTPlate>
+      <PTPlate content="pawel"></PTPlate>
     </div>
   );
 }
