@@ -36,7 +36,7 @@ function App() {
       hello2
       <input type="text" onChange={(x) => setRawContent(x.target.value)}></input>
       <PTButton label="click me!"></PTButton>
-      <PTPlate content={content} contentChanged={contentChanged}></PTPlate>
+      <PTPlate content={content} forceResetContent={content}  contentChanged={contentChanged}></PTPlate>
       <span>Raw content changed:{JSON.stringify(plateValue)}</span>
     </div>
   );
