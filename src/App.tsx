@@ -26,6 +26,7 @@ function App() {
   };
 
   const [plateValue, setPlateValue] = useState<MyParagraphElement[]>();
+  const [readOnly, setReadonly] = useState<boolean>(false);
 
   const contentChanged = (e: MyParagraphElement[]) => {
     setPlateValue(e);
@@ -35,8 +36,15 @@ function App() {
     <div className="App">
       hello2
       <input type="text" onChange={(x) => setRawContent(x.target.value)}></input>
+      <button onClick={() => setReadonly(!readOnly)}>Toogle readonly</button>
       <PTButton label="click me!"></PTButton>
-      <PTPlate content={content} forceResetContent={content}  contentChanged={contentChanged}></PTPlate>
+      <span>readonly: {readOnly ? "true" : "false"}</span>
+      <PTPlate
+        content={content}
+        forceResetContent={content}
+        contentChanged={contentChanged}
+        readOnly={readOnly}
+      ></PTPlate>
       <span>Raw content changed:{JSON.stringify(plateValue)}</span>
     </div>
   );
