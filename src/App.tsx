@@ -1,6 +1,6 @@
 import React, { ReactElement, useState, useRef } from "react";
 
-import { PTButton, PTPlate, MyParagraphElement } from "productivitytools.plate";
+import { PTButton, PTPlate, MyValue } from "productivitytools.plate";
 
 const initialValue = (content: string) => [
   {
@@ -25,10 +25,10 @@ function App() {
     setContent(x);
   };
 
-  const [plateValue, setPlateValue] = useState<MyParagraphElement[]>();
+  const [plateValue, setPlateValue] = useState<MyValue>();
   const [readOnly, setReadonly] = useState<boolean>(false);
 
-  const contentChanged = (e: MyParagraphElement[]) => {
+  const contentChanged = (e: MyValue) => {
     setPlateValue(e);
   };
 
